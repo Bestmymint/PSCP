@@ -1,0 +1,16 @@
+{% extends 'login_base.html' %}
+
+{% block content %}
+    <div class="justify-center flex text-5xl mt-36">
+        <h1>GET SET GO</h1>
+    </div>
+
+    <center>
+        <!-- url_for เป็นการกดแล้วจะเรียกใช้ function ใน app.py ใช้แบบกดตอนเปลี่ยน Path พยายามใช้ tag a นะ-->
+        <a href="{{ url_for('login' ) }}" class="bg-orange-200 text-2xl w-40 mt-20 px-4 py-2 rounded-lg">Login</a>
+    </center>
+
+    <center>
+        <a href="{{ url_for('signup') }}" class="bg-orange-200 text-2xl w-40 mt-10 px-4 py-2 rounded-lg">Sign Up</a>
+    </center>
+{% endblock %}
