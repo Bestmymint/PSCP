@@ -20,6 +20,6 @@ def create_app():
     def index():
         if 'username' in session:
             return render_template('index.html', username = session['username'])
-        return redirect('user/login')
+        return redirect('user')
 
     return app

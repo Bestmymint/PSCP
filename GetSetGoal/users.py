@@ -3,6 +3,11 @@ from .models import User
 
 users = Blueprint('users', __name__)
 
+@users.route('/', methods=['GET'])
+def user_index():
+    if request.method == "GET":
+        return render_template('home.html')
+
 @users.route('/login', methods=['GET', 'POST'])
 def login():
     """Path for user Login"""
