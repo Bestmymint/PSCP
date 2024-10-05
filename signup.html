@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content_signup %}
+<div class="justify-center flex text-5xl mt-36">
+    <h1>Sign-Up</h1>
+</div>
+{% endblock %}
+{% block email2 %}
+    <center>
+        <div class="mt-20">
+            <label for="email">Email :</label>
+            <input type="text"id="email" class="border border-black rounded-lg text-base px-2 py-1" placeholder="Enter Your Email ...">
+        </div>
+    </center>
+{% endblock %}
+{% block password2 %}
+    <center>
+        <div class="mt-5">
+            <label for="password">Password :</label>
+            <input type="password"id="password" class="border border-black rounded-lg text-base px-2 py-1" placeholder="Enter Your Password ...">
+        </div>
+    </center>
+{% endblock %}
+{% block passwordcon %}
+    <center>
+        <div class="mt-5">
+            <label for="password">Confirm :</label>
+            <input type="password"id="password" class="border border-black rounded-lg text-base px-2 py-1" placeholder="Enter Your Password ...">
+        </div>
+    </center>
+{% endblock %}
+{% block submit2 %}
+    <center>
+        <button class="bg-orange-200 text-xl w-40 mt-10 px-4 py-2 rounded-lg" onclick="location.href='https://youtu.be/dQw4w9WgXcQ?si=EunIq99-qHEx29bt' "><i class="fa-solid fa-right-to-bracket pr-3"></i>Sign-Up</button>
+    </center>
+{% endblock %}
