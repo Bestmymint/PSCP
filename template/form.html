@@ -6,7 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="post">
+
+    <!-- template Form -->
+    <form action="{{ url_for('signup') }}" method="post">
         <div class="">
             <label for="email">Email :</label>
             <input type="email" name="email" placeholder="Enter Your Email ...">
