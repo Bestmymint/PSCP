@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <h1>Welcome Signup</h1>
+        <form action="" method="post">
+            <input 
+                type="text"
+                name="username"
+                placeholder="Username"
+                class="input-field"
+            />
+            <input 
+                type="password"
+                name="password"
+                placeholder="Password"
+                class="input-field"
+            >
+            <input type="submit" value="Signup" class="btn btn-login" />
+            <a href="{{ url_for('users.login' ) }}">if have user</a>
+        </form>
+    </div>
+{% endblock %}
