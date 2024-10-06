@@ -30,4 +30,4 @@ def signup():
 @users.route('/logout')
 def logout():
     session.clear()
-    return redirect('login')
+    return redirect('/')
