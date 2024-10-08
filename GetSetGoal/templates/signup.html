@@ -20,4 +20,10 @@
             <a href="{{ url_for('users.login' ) }}">if have user</a>
         </form>
     </div>
+
+    {% if err == "HaveUser" %}
+    <script>
+        alert("Have User")
+    </script>
+    {% endif %}
 {% endblock %}

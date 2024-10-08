@@ -1,5 +1,5 @@
 """Create Models"""
-from flask import Flask, jsonify, session, redirect, url_for
+from flask import Flask, session, redirect, url_for, render_template
 from werkzeug.security import generate_password_hash, check_password_hash
 import uuid
 from . import db
@@ -10,7 +10,6 @@ class User():
     
     def start_session(self, user):
         del user['password']
-        session['logged_in'] = True
         session['username'] = user['username']
         return redirect(url_for('index'))
 
@@ -23,8 +22,8 @@ class User():
             "password" : password
         }
         
-        if db.user.find_one({'username' : username}):
-            return "Name already in use"
+        if db.users.find_one({'username' : username}):
+            return render_template("signup.html" , err="HaveUser")
         
         user['password'] = generate_password_hash(user['password'])
         
